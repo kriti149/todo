@@ -1,24 +1,7 @@
-# README
+Todo App-
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1) There are several "Todo lists" and each list has several "Todo items".
 
-Things you may want to cover:
+2) Each Todo list has title and description. It is possible to create, show, edit and delete any todo list.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+3) Each Todo item has content, due date and priority. It is possible to create, show, mark as complete and delete any todo item.
