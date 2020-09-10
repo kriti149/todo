@@ -7,7 +7,7 @@ class TodoItemsController < ApplicationController
 		redirect_to @todo_list
 	end
 
-	def destroy
+	def destroy	
 		if @todo_item.destroy
 			flash[:success] = "Todo List item was deleted."
 		else
@@ -19,6 +19,15 @@ class TodoItemsController < ApplicationController
 	def complete
 		@todo_item.update_attribute(:completed_at, Time.now)
 		redirect_to @todo_list, notice: "Todo item completed"
+	end   
+
+	def update
+		if @todo_item.update(todo_item_params)
+			flash[:success] = "Todo List item was successfully edited."
+		else
+			flash[:error] = "Todo List item could not be edited."
+		end
+		redirect_to @todo_list		
 	end
 
 	private

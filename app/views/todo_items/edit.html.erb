@@ -1,0 +1,8 @@
+<h1>Editing Todo List</h1>
+
+<%= form_for ([@todo_list, @todo_item]) do |f| %>
+  	<%= f.text_field :content, placeholder: "New Todo content" %>
+  	<%= f.datetime_field :due_date, placeholder: "New Todo due date" %>
+  	<%= f.number_field :priority, placeholder: "Should be between (1-5)" %>
+  	<%= f.submit %>
+<% end %>
